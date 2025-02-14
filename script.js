@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scoreDisplay = document.getElementById('score');
 
     let clickCount = 0;
-    let maxClicks = 5; // Liczba kliknięć potrzebnych do maksymalnego powiększenia zdjęcia
+    let maxClicks = 5;
     let currentQuestion = 0;
     let correctAnswers = 0;
 
@@ -45,7 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function showParticles() {
-        // Tutaj dodaj logikę do wyświetlania particle (serduszek)
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('Particles loaded!');
+        });
+
+        setTimeout(() => {
+            document.getElementById('particles-js').style.display = 'none';
+        }, 2000);
     }
 
     function showQuestion() {
@@ -76,5 +82,10 @@ document.addEventListener('DOMContentLoaded', function () {
         questionBox.classList.add('hidden');
         certificate.classList.remove('hidden');
         scoreDisplay.textContent = Math.round((correctAnswers / questions.length) * 100);
+
+        const images = document.querySelectorAll('.slide-in');
+        images.forEach(image => {
+            image.classList.add('slide-in');
+        });
     }
 });

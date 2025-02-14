@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochasiowe Gody</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-screen">
+        <h1>KOHASIOWE GODY</h1>
+        <p>Naciśnij środek ekranu</p>
+    </div>
+
+    <div id="image-container" class="hidden">
+        <img id="main-image" src="image.jpg" alt="Kochasiowe Gody">
+    </div>
+
+    <div id="question-box" class="hidden">
+        <div class="question-header">
+            <p>Pytanie</p>
+        </div>
+        <div class="question-body">
+            <input type="text" id="answer-input" placeholder="Wpisz odpowiedź">
+        </div>
+    </div>
+
+    <div id="hint-box" class="hidden">
+        <div class="hint-header">
+            <p>NAPRAWDE?</p>
+        </div>
+        <div class="hint-body">
+            <img src="hint-image.jpg" alt="Podpowiedź">
+            <button id="hint-close">OK</button>
+        </div>
+    </div>
+
+    <div id="certificate" class="hidden">
+        <h2>CERTYFIKAT KOCHASIA</h2>
+        <p>Data: 14.02.2025</p>
+        <p>Miejsce: Bebowice</p>
+        <p>Gratulacje! Właśnie zostałaś certyfikowanym kochasiem. Zdobyłaś wynik <span id="score">X</span>%.</p>
+        <p>Podpis: ........................</p>
+        <p>ANANAS</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
